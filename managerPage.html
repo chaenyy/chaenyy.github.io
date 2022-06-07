@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chany</title>
+    <link rel="stylesheet" href="css/managerPage_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=East+Sea+Dokdo&family=Hi+Melody&family=Jua&family=Lato:wght@700&family=Luckiest+Guy&family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Racing+Sans+One&family=Roboto+Mono:ital,wght@0,400;1,500&family=Shrikhand&family=Ultra&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h2 class="logo"><a href="index.html">CHANY</a></h2>
+            <nav>
+                <ul class="headerMenu">
+                    <li><a href="introduce.html">INTRODUCE</a></li>
+                    <li><a href="travel.html">TRAVEL</a></li>
+                    <li><a href="roadmap.html">ROAD-MAP</a></li>
+                </ul>
+            </nav>
+                <div class="loginMenu">
+                    <div class="loginMemberInfo"></div>
+                    <div id="loginText" onclick="loginBtn(this);">LOGIN</div>
+                    <a href="join.html" id="joinText">JOIN</a>
+                </div>
+        </div>
+    </header>
+    <main>
+        <div class="content-wrap">
+            <h2 class="titleArea">MEMBERSHIP-LIST</h2>
+            <div class="information">
+                <div class="informationText"></div>
+            </div>
+            <h3 class="subTitle">회원리스트</h3>
+            <article>
+                <table id="tb-membership-list">
+                    <thead>
+                        <tr>
+                            <th class="userId">아이디</th>
+                            <th class="userPwd">비밀번호</th>
+                            <th class="userPwd_Question">비밀번호 확인 질문</th>
+                            <th class="userPwd_Answer">비밀번호 질문 답변</th>
+                            <th class="userName">이름</th>
+                            <th class="phoneNumber">일반전화</th>
+                            <th class="mobileNumber">휴대전화</th>
+                            <th class="userEmail">이메일</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </article>
+        </div>
+    </main>
+
+    <script>
+    window.onload = () => {
+       const members = JSON.parse(localStorage.getItem("members"));
+       if(!members) return;
+
+        const tbody = document.querySelector("#tb-membership-list tbody");
+        tbody.innerHTML = '';
+        const loginInfo = JSON.parse(localStorage.getItem("loginInfo"));
+        const managers = JSON.parse(localStorage.getItem("managers"));
+        const informationText = document.querySelector(".informationText");
+
+        members.map((member, index) => {
+            const {userId, userPwd, userPwd_Question, userPwd_Answer, userName, phoneNumber, mobileNumber, userEmail} = member;
+            return `
+                <tr>
+                    <td class="userId">${userId}</td>
+                    <td class="userPwd">${userPwd}</td>
+                    <td class="userPwd_Question">${userPwd_Question}</td>
+                    <td class="userPwd_Answer">${userPwd_Answer}</td>
+                    <td class="userName">${userName}</td>
+                    <td class="phoneNumber">${phoneNumber}</td>
+                    <td class="mobileNumber">${mobileNumber}</td>
+                    <td class="userEmail">${userEmail}</td>
+                </tr>
+            `
+        }).forEach(tr => tbody.innerHTML += tr);
+
+        if(loginInfo) {
+            if(loginInfo.permission === 'admin') {
+                const {managerId, managerPwd, permission} = loginInfo;
+                informationText.innerHTML = `매니저 <strong>${managerId}</strong> 계정으로 접속하셨습니다. <strong>[${permission}]</strong> 회원이십니다.`;
+            }
+        } else return;
+    };
+
+    // 로그인 시 헤더에 표시
+    const loginInfo = () => {
+        const loginData = JSON.parse(localStorage.getItem("loginInfo"));
+        const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
+        
+        if(loginData) {
+            if(loginData.permission === 'normal') {
+                loginMemberInfoDiv.innerHTML = `<a href='myPage.html'>${loginData.userName}</a>님, 환영합니다!`;
+                loginText.innerHTML = `LOGOUT`;
+                joinText.innerHTML = '';
+            } else if(loginData.permission === 'admin') {
+                loginMemberInfoDiv.innerHTML = `<a href='managerPage.html'>매니저 ${loginData.managerId}</a> 계정으로 접속되었습니다.`;
+                loginText.innerHTML = `LOGOUT`;
+                joinText.innerHTML = '';
+            }
+        } else {
+            loginMemberInfoDiv.innerHTML = '';
+            loginText.innerHTML = 'LOGIN';
+            joinText.innerHTML = 'JOIN';
+        }
+    };
+    
+    loginInfo();
+
+    const loginBtn = (element) => {
+        const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
+        
+        if(element.innerHTML === 'LOGIN') {
+            window.location.href = "login.html";
+            return;
+        }
+
+        if(element.innerHTML === 'LOGOUT') {
+            const flag = confirm("로그아웃 하시겠습니까?");
+            if(flag) {
+                localStorage.removeItem('loginInfo');
+                loginMemberInfoDiv.innerHTML = '';
+                loginText.innerHTML = 'LOGIN';
+                joinText.innerHTML = 'JOIN';
+                window.location.href = 'index.html';
+            } else {
+                return;
+            }
+        }
+    };
+    </script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chany</title>
+    <link rel="stylesheet" href="css/introduce_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=East+Sea+Dokdo&family=Hi+Melody&family=Jua&family=Lato:wght@700&family=Luckiest+Guy&family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Quicksand:wght@300&family=Racing+Sans+One&family=Roboto+Mono:ital,wght@0,400;1,500&family=Shrikhand&family=Ultra&display=swap" rel="stylesheet"></head>
+<body>
+    <header>
+        <div class="header">
+            <h2 class="logo"><a href="index.html">CHANY</a></h2>
+            <nav>
+                <ul class="headerMenu">
+                    <li id="introduceBtn"><a href="introduce.html">INTRODUCE</a></li>
+                    <li><a href="travel.html">TRAVEL</a></li>
+                    <li><a href="roadmap.html">ROAD-MAP</a></li>
+                </ul>
+            </nav>
+            <div class="loginMenu">
+                <div class="loginMemberInfo"></div>
+                <div id="loginText" onclick="loginBtn(this);">LOGIN</div>
+                <a href="join.html" id="joinText">JOIN</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <header class="titleHeader">
+            <div id="mainTitle">INTRODUCE</div>
+            <div id="subTitle">Are you serious?<br>지금 바로 확인하세요!</div>
+        </header>
+        <article>
+            <header class="contentHeader">
+                <div id="profileImage"></div>
+                <div id="myName">박채은</div>
+                <div id="subProfile">믿고 쓰는 개발자</div>
+                <hr>
+                <div class="icon-wrapper"><div class="locationIcon"></div></div>
+                <div id="local">경기도 성남시 분당구<br>정자일로 95 NAVER 본사</div>
+                <div class="icon-wrapper"><div class="phoneIcon"></div></div>
+                <div id="phoneNum">010-9876-4321</div>
+                <div class="icon-wrapper"><div class="mailIcon"></div></div>
+                <div id="mailAddress">qkrcodms99@gmail.com</div>
+                <div class="icon-wrapper"><div class="snsIcon"></div></div>
+                <div id="sns">@chanyinstagram</div>
+            </header>
+            <section class="content">
+                <h3 id="contentMyName">PARK CHAEEUN</h3>
+                <div id="profileBox">PROFILE</div>
+                <div class="profileBoxContent">
+                    <div id="profileContent">
+                        <span id="profileContentTitle_1"> 피망마켓 창업</span>
+                        <span id="profileContentTitle_2"> 안우아한 형제들 개발팀 PM</span>
+                    </div>
+                    <div id="profileContentText">
+                        <div style="font-weight: bold;">[피망마켓]</div>
+                        <div>* 동네친구를 탐색하여 자신의 소장품을 주고 받는 피망마켓을 창업</div>
+                        <div>* 기획에서부터 최종 결과물까지 제작하여 1인 기업이지만 100억 상당의 수익을 창출</div>
+                        <div style="font-weight: bold;">[안우아한 형제들]</div>
+                        <div>* 환경오염을 방지하고자 오토바이 등을 이용한 배달이 아닌 자전거, 도보로 배달하는 서비스 기획</div>
+                        <div>* 환경문제개선에 큰 기여와 배달원분들의 안전을 보장해주는 기발한 아이디어로 표창장 수상</div>
+                    </div>
+                </div>
+                <div id="experienceBox">WORK EXPERIENCE</div>
+                <div class="experienceBoxContent">
+                    <div id="line"></div>
+                    <div class="firstProject">
+                        <div id="projectDate">2022-04 ~ 2022-04</div>
+                        <div id="projectTitle">자바 콘솔을 이용한 미니프로젝트</div>
+                        <div id="projectText"><div style="color: gray; font-weight: bold;">팀장 자리를 맡아 짧은 기간 내에 완성시킨 콘솔게임즈,</div>
+                            자바를 이용하여 세가지의 게임, 랭킹, 회원관리를 제공해주는 프로젝트를 완성시켰습니다.</div>
+                    </div>
+                    <div class="secondProject">
+                        <div id="projectDate">2022-05 ~ 2022-06</div>
+                        <div id="projectTitle">HTML/CSS/Javascript를 이용한 개인프로젝트</div>
+                        <div id="projectText"><div style="color: gray; font-weight: bold;">페이지 구성부터 다양한 기능을 제공해주는 CHANY 완성,</div>
+                            페이지 구성, 디자인, 로그인/아웃, 회원가입/관리, 관리자 계정 등 다양한 기능을 구현하였습니다.</div>
+                    </div>
+                    <div class="thirdProject">
+                        <div id="projectDate">2022-08 ~ 2022-09</div>
+                        <div id="projectTitle">프론트엔드&백엔드 파이널프로젝트</div>
+                        <div id="projectText"><div style="color: gray; font-weight: bold;">실제 서비스를 제공하는 웹 사이트 완성,</div>
+                        프론트와 백을 모두 구현한 나만의 웹사이트를 만들어 서비스를 제공하였습니다.</div>
+                    </div>
+                </div>
+                <div id="characterBox">CHARACTER</div>
+                <div class="characterIcon">
+                    <div class="firstCharacter">
+                        <div class="charIcon-wrapper firstIcon-wrapper"><div class="firstIconImage"></div></div>
+                        <div id="characterSubTitle">언제나 밝은</div>
+                        <div id="characterMainTitle">긍정적인 에너지</div>
+                    </div>
+                    <div class="secondCharacter">
+                        <div class="charIcon-wrapper secondIcon-wrapper"><div class="secondIconImage"></div></div>
+                        <div id="characterSubTitle">항상 도전하려하는</div>
+                        <div id="characterMainTitle">끝없는 도전정신</div>
+                    </div>
+                    <div class="thirdCharacter">
+                        <div class="charIcon-wrapper thirdIcon-wrapper"><div class="thirdIconImage"></div></div>
+                        <div id="characterSubTitle">포기를 모르는</div>
+                        <div id="characterMainTitle">끈기와 책임감</div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <aside>
+        <div class="scroll-top-btn">
+            <a href="#"><div id="scrollTopBtnImage"></div></a>
+        </div>
+    </aside>
+    
+    <footer class="footer-section">
+        <div class="footer-wrap">
+            <div class="footer-top">
+                <div class="footer-top-title">상호명 : 채니 ㈜</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-top-title">대표이사 : 박채은</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-top-title">사업자등록번호 : 123-45-67890</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-top-title">통신판매업 신고번호 : 서울 강남 제 2014-01호</div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-title">주소 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 5층 채니 ㈜</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-bottom-title">제휴문의 : 070-9876-5432</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-bottom-title">이메일 : chaeeun0119@chany.com</div>
+            </div>
+            <div class="footer-copyright">Copyright 2022 CHANY. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+    // 로그인 시 헤더에 표시
+        const loginInfo = () => {
+        const loginData = JSON.parse(localStorage.getItem("loginInfo"));
+        const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
+        
+        if(loginData) {
+            if(loginData.permission === 'normal') {
+                loginMemberInfoDiv.innerHTML = `<a href='myPage.html'>${loginData.userName}</a>님, 환영합니다!`;
+                loginText.innerHTML = `LOGOUT`;
+                joinText.innerHTML = '';
+            } else if(loginData.permission === 'admin') {
+                loginMemberInfoDiv.innerHTML = `<a href='managerPage.html'>매니저 ${loginData.managerId}</a> 계정으로 접속되었습니다.`;
+                loginText.innerHTML = `LOGOUT`;
+                joinText.innerHTML = '';
+            }
+        } else {
+            loginMemberInfoDiv.innerHTML = '';
+            loginText.innerHTML = 'LOGIN';
+            joinText.innerHTML = 'JOIN';
+        }
+    };
+    
+    loginInfo();
+
+    const loginBtn = (element) => {
+        const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
+        
+        if(element.innerHTML === 'LOGIN') {
+            window.location.href = "login.html";
+            return;
+        }
+
+        if(element.innerHTML === 'LOGOUT') {
+            const flag = confirm("로그아웃 하시겠습니까?");
+            if(flag) {
+                localStorage.removeItem('loginInfo');
+                loginMemberInfoDiv.innerHTML = '';
+                loginText.innerHTML = 'LOGIN';
+                joinText.innerHTML = 'JOIN';
+                window.location.href = 'index.html';
+            } else {
+                return;
+            }
+        }
+    };
+    </script>
+</body>
+</html>

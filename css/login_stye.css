@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/*-----------------header------------------*/
+.header {
+    /* position: fixed; */
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.089);
+}
+.logo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 900;
+}
+.logo a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 10px 10px 50px;
+}
+.headerMenu {
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+    gap: 100px;
+    padding-left: 0px;
+}
+.headerMenu li a, .loginMenu a, #loginText {
+    text-decoration: none;
+    color:  black;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#loginText {
+    cursor: pointer;
+}
+.loginMenu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.loginMenu img {
+    width: 30px;
+    height: 30px;
+}
+.loginMenu:last-child {
+    padding-right: 50px;
+}
+.loginMemberInfo {
+    margin-top: 5px;
+    font-size: 12px;
+    color: gray;
+}
+/*-----------------main------------------*/
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header-wrap {
+    margin: 40px 0;
+    font-size: 40px;
+}
+.header-wrap h2 {
+    font-family: 'Racing Sans One', cursive;
+    font-weight: 100;
+    color: #966260;
+}
+input {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    margin: 8px 0 5px 0;
+    padding-left: 8px;
+    background-color: #f8f4f3;
+    border: none;
+}
+#finalLoginBtn {
+    margin-top: 20px;
+    width: 455px;
+    height: 50px;
+    outline: none;
+    background-color: #C36666;
+    color: white;
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+#finalLoginBtn:hover {
+    background-color: #a85f5f;
+}
+#joinBtn {
+    margin: 10px 0 20px 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border: 1.5px solid #a97a77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #a97a77;
+    cursor: pointer;
+}
+#joinBtn a {
+    color: #a97a77;
+}
+#joinBtn:hover {
+    background-color: #a97a7711;
+}
+.orMsg {
+    width: 455px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 20px 0; */
+    font-size: 13px;
+    color: lightslategray;
+}
+#managerLoginBtn {
+    width: 455px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    background-color: #a97a7711;
+    border: 1.5px solid #a97a77;
+    font-weight: bold;
+    color: #a97a77;
+    cursor: pointer;
+}
+#managerLoginBtn:hover {
+    background-color: white;
+}
+#line {
+    height: 50px;
+    width: 1px;
+    background-color: rgba(211, 211, 211, 0.68);
+    margin: 0 auto;
+}

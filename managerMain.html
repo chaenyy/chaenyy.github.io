@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chany</title>
+    <link rel="stylesheet" href="css/managerMain_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=East+Sea+Dokdo&family=Hi+Melody&family=Jua&family=Lato:wght@700&family=Luckiest+Guy&family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Racing+Sans+One&family=Roboto+Mono:ital,wght@0,400;1,500&family=Shrikhand&family=Ultra&display=swap" rel="stylesheet"></head>
+
+</head>
+<body>
+<header>
+        <div class="header">
+            <h2 class="logo"><a href="index.html">CHANY</a></h2>
+            <nav>
+                <ul class="headerMenu">
+                    <li id="introduceBtn"><a onclick="menuScroll('INTRODUCE')">INTRODUCE</a></li>
+                    <li id="travelBtn"><a onclick="menuScroll('TRAVEL')">TRAVEL</a></li>
+                    <li id="roadMapBtn"><a onclick="menuScroll('ROAD-MAP')">ROAD-MAP</a></li>
+                </ul>
+                <div id="menuBorderLine"></div>
+            </nav>
+            <div class="loginMenu">
+                <div class="loginMemberInfo"></div>
+                <div id="loginText" onclick="loginBtn(this);">LOGIN</div>
+                <a href="join.html" id="joinText">JOIN</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <header>
+            <div class="header-wrap">
+                <h2>MANAGER-PAGE</h2>
+            </div>
+        </header>
+
+        <article>
+            <div class="login-wrap">
+                <section>
+                        <input type="text" name="managerId" id="managerId" placeholder="관리자 아이디" maxlength="16" required>
+                    <div class="login-input-Pwd">
+                        <input type="password" name="managerPwd" id="managerPwd" placeholder="관리자 비밀번호" maxlength="16" required>
+                    </div>
+                    <div class="finalLogin">
+                        <button class="finalManagerLoginBtn">관리자 모드 로그인하기</button>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <script>
+    // 관리자 계정 로그인 
+    const managerAvailCheck = () => {
+        if(!managerId.value || !managerPwd.value) return;
+        
+        const superManagers = [{managerId:'manager1', managerPwd:'manager1'},{managerId:'manager2', managerPwd:'manager2'},{managerId:'manager3', managerPwd:'manager3'}];
+ 
+        if(Array.isArray(superManagers)) {
+            const managerInfo = superManagers.find(manager => manager.managerId === managerId.value);
+            if(managerInfo) {
+                if(managerInfo.managerPwd === managerPwd.value) {
+                    console.log('로그인 성공')
+                    managerId.value = '';
+                    managerPwd.value = '';
+                    managerLoginIsTrue(managerInfo.managerId, managerInfo.managerPwd);
+                    window.location.href = "index.html";
+                    return;
+                } else {
+                    alert('비밀번호가 일치하지 않습니다.');
+                    window.location.href = "managerMain.html";
+                    return;
+                }
+            } else {
+                alert('존재하지 않는 매니저 아이디입니다.');
+                window.location.href = "managerMain.html";
+                return;
+            }
+        }
+    };
+
+    managerAvailCheck();
+
+    // 매니저 로그인 회원 정보 클래스
+    class LoginManager {
+        constructor(managerId, managerPwd, permission) {
+            this.managerId = managerId;
+            this.managerPwd = managerPwd;
+            this.permission = permission;
+        }    
+    };
+
+    // 매니저 로그인 회원 정보저장
+    const managerLoginIsTrue = (managerId, managerPwd) => {
+        const loginManager = new LoginManager(managerId, managerPwd, 'admin');
+        const loginManagerData = JSON.stringify(loginManager);
+        localStorage.setItem("loginInfo", loginManagerData);
+    };
+
+    
+    // 관리자모드 로그인 시 헤더에 표시
+    const loginInfo = () => {
+        const loginData = JSON.parse(localStorage.getItem("loginInfo"));
+        const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
+        
+        if(loginData) {
+            if(loginData.permission === 'normal') {
+                loginMemberInfoDiv.innerHTML = `${loginData.userName}님, 환영합니다!`;
+                loginText.innerHTML = `LOGOUT`;
+                joinText.innerHTML = '';
+            } else if(loginData.permission === 'admin') {
+                loginMemberInfoDiv.innerHTML = `매니저 ${loginData.managerId} 계정으로 접속되었습니다.`;
+                loginText.innerHTML = `LOGOUT`;
+                joinText.innerHTML = '';
+            }
+        } else {
+            loginMemberInfoDiv.innerHTML = '';
+            loginText.innerHTML = 'LOGIN';
+            joinText.innerHTML = 'JOIN';
+        }
+    };
+    
+    loginInfo();
+
+    // 비밀번호 창에서 엔터 입력 시
+    document.querySelector("#managerPwd").addEventListener('keyup', (event) => {
+        if(event.key === 'Enter') managerAvailCheck();
+        else return;
+    });
+
+    const loginBtn = (element) => {
+        const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
+        
+        if(element.innerHTML === 'LOGIN') {
+            window.location.href = "login.html";
+            return;
+        }
+
+        if(element.innerHTML === 'LOGOUT') {
+            const flag = confirm("로그아웃 하시겠습니까?");
+            if(flag) {
+                localStorage.removeItem('loginInfo');
+                loginMemberInfoDiv.innerHTML = '';
+                loginText.innerHTML = 'LOGIN';
+                joinText.innerHTML = 'JOIN';
+                window.location.href = 'index.html';
+            } else {
+                return;
+            }
+        }
+    };
+    </script>
+</body>
+</html>

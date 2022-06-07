@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chany</title>
+    <link rel="stylesheet" href="css/travel_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=East+Sea+Dokdo&family=Hi+Melody&family=Jua&family=Lato:wght@700&family=Luckiest+Guy&family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Racing+Sans+One&family=Roboto+Mono:ital,wght@0,400;1,500&family=Shrikhand&family=Ultra&display=swap" rel="stylesheet"></head>
+<body>
+    <header>
+        <div class="header">
+            <h2 class="logo"><a href="index.html">CHANY</a></h2>
+            <nav>
+                <ul class="headerMenu">
+                    <li><a href="introduce.html">INTRODUCE</a></li>
+                    <li id="travelBtn"><a href="travel.html">TRAVEL</a></li>
+                    <li><a href="roadmap.html">ROAD-MAP</a></li>
+                </ul>
+            </nav>
+            <div class="loginMenu">
+                <div class="loginMemberInfo"></div>
+                <div id="loginText" onclick="loginBtn(this);">LOGIN</div>
+                <a href="join.html" id="joinText">JOIN</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="content">
+            <header>
+                <h2 id="mainTitle">TRAVEL</h2>
+                <div id="subTitle">Are you ready?<br>지금 바로 떠나요!</div>
+                <div id="mainBook">
+                    <div class="box">
+                        <a href="#gyeonju"><div id="box1" onmouseenter="mouseEnterBackgroundImage('mainBookImage', 'image/mainBook_gyeongju.png')" onmouseleave="mouseleaveBackgroundImageNone()"></div></a>
+                        <a href="#jeju"><div id="box2" onmouseenter="mouseEnterBackgroundImage('mainBookImage','image/mainBook_jeju.png')" onmouseleave="mouseleaveBackgroundImageNone()"></div></a>
+                        <a href="#yeosu"><div id="box3" onmouseenter="mouseEnterBackgroundImage('mainBookImage','image/mainBook_yeosu.png')" onmouseleave="mouseleaveBackgroundImageNone()"></div></a>
+                    </div>
+                    <div class="mainBookImage-wrapper">
+                        <div class="mainBookImage"></div>
+                    </div>
+                </div>
+            </header>
+            <a name="gyeonju"><hr></a>
+            <article>
+                <section class="gyeongju">
+                    <div class="titleBox">
+                        <div id="titleBoxMain">GyeonJu</div>
+                        <div id="titleBoxSub">경주</div>
+                        <div id="titleBoxIntro">역사를 품은 도시,<br>미래를 담은 경주</div>
+                    </div>
+                    <div class="content">
+                        <div class="first-slide slidebox">
+                            <ul class="first-slides slides">
+                                <li style="background-image: url(image/gyeongjuMain.jpg);"></li>
+                                <li style="background-image: url(image/gyeongjuMain_2.jpg);"></li>
+                                <li style="background-image: url(image/gyeongjuMain_3.jpg);"></li>
+                            </ul>
+                            <div class="controller">
+                                <div class="firstPrev prev"></div>
+                                <div class="firstNext next"></div>
+                            </div>
+                        </div>
+                        <div class="spotImage">
+                            <div id="spotImage_1">
+                                <div class="image gyeongjuSpotImage_1" onmouseenter="mouseEnterBackgroundImage('gyeongjuSpotImage_1', 'image/gyeongjuSub_1.jpg')" onmouseleave="mouseleaveBackgroundImageRestore('gyeongjuSpotImage_1', 'image/gyeongjuSub_2.jpg')"></div>
+                                <div id="spotText">#대릉원</div>
+                                <div id="explainSpot">
+                                    23기의 신라시대 고분이 모여 있는 고분유적지
+                                    <br>
+                                    호수 등 경치가 예뻐 포토존이 많음!
+                                </div>
+                            </div>
+                            <div id="spotImage_2">
+                                <div class="image gyeongjuSpotImage_2" onmouseenter="mouseEnterBackgroundImage('gyeongjuSpotImage_2', 'image/gyeongjuSub_4.jpg')" onmouseleave="mouseleaveBackgroundImageRestore('gyeongjuSpotImage_2', 'image/gyeongjuSub_3.jpg')"></div>
+                                <div id="spotText">#경주월드</div>
+                                <div id="explainSpot">
+                                    롤코대장! 경주월드!
+                                    <br>
+                                    짜릿한 스릴을 경험하고 싶다면 경주월드로,
+                                </div>
+                            </div>
+                        </div>
+                        <div class="foodBox">
+                            <div id="foodBoxTitle">먹부림</div>
+                            <div class="foodImage">
+                                <div class="food" style="background-image: url(image/gyeongjuFoodImage_1.jpg);"></div>
+                                <div class="foodText">
+                                    <div class="foodTitleText">#오황남</div>
+                                    <div class="foodSubText">
+                                        황리단길 길거리 음식 중 하나인 '오황남'
+                                        <br>
+                                        CHANY의 Best Pick!
+                                        <br>
+                                        오징어채 튀김과 구름맥주 한 입에 게임 끝
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foodImage">
+                                <div class="foodText">
+                                    <div class="foodTitleText">#대릉갈비</div>
+                                    <div class="foodSubText">
+                                        한옥뷰에서 즐기는 소고기 맛집 '대릉갈비'
+                                        <br>
+                                        숯불에 구워먹어 더 맛있고,
+                                        <br>
+                                        먹다 풍경에 취해버리는 이 곳
+                                    </div>
+                                </div>
+                                <div class="food" style="background-image: url(image/gyeongjuFoodImage_2.jpg);"></div>
+                            </div>
+                            <div class="foodImage">
+                                <div class="food" style="background-image: url(image/gyeongjuFoodImage_3.jpg);"></div>
+                                <div class="foodText">
+                                    <div class="foodTitleText">#황남 옼수수</div>
+                                    <div class="foodSubText">
+                                        황리단길 길거리 음식 중 하나인 '황남옥수수'
+                                        <br>
+                                        옥수수 튀김과 옥수스크림으로 입가심
+                                        <br>
+                                        간식이지만 옥수수라서 포만감 더블!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <a name="jeju"><hr></a>
+                <section class="jeju">
+                    <div class="titleBox">
+                        <div id="titleBoxMain" name="jeju">Jeju</div>
+                        <div id="titleBoxSub">제주</div>
+                        <div id="titleBoxIntro">국내 유일의 세계자연유산,<br>아름다운 섬 제주</div>
+                    </div>
+                    <div class="content">
+                        <div class="second-slide slidebox">
+                            <ul class="second-slides slides">
+                                <li style="background-image: url(image/jejuMain.jpg);"></li>
+                                <li style="background-image: url(image/jejuMain_2.jpg);"></li>
+                                <li style="background-image: url(image/jejuMain_3.jpg);"></li>
+                            </ul>
+                            <div class="controller">
+                                <div class="secondPrev prev"></div>
+                                <div class="secondNext next"></div>
+                            </div>
+                        </div>
+                        <div class="spotImage">
+                            <div id="spotImage_1">
+                                <div class="image jejuSpotImage_1" onmouseenter="mouseEnterBackgroundImage('jejuSpotImage_1', 'image/jejuSub_2.jpg')" onmouseleave="mouseleaveBackgroundImageRestore('jejuSpotImage_1', 'image/jejuSub_1.jpg')"></div>
+                                <div id="spotText">#쇠소깍</div>
+                                <div id="explainSpot">
+                                    카약을 타며 즐기는 제주 풍경
+                                    <br>
+                                    힐링하기 딱 좋음!
+                                </div>
+                            </div>
+                            <div id="spotImage_2">
+                                <div class="image jejuSpotImage_2" onmouseenter="mouseEnterBackgroundImage('jejuSpotImage_2', 'image/jejuSub_3.jpg')" onmouseleave="mouseleaveBackgroundImageRestore('jejuSpotImage_2', 'image/jejuSub_4.jpg')"></div>
+                                <div id="spotText">#우도</div>
+                                <div id="explainSpot">
+                                    가보면 전혀 후회없는 섬
+                                    <br>
+                                    규모가 크니 시간을 넉넉히 잡아야함!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="foodBox">
+                            <div id="foodBoxTitle">먹부림</div>
+                            <div class="foodImage">
+                                <div class="food" style="background-image: url(image/jejuFoodImage_1.jpg);"></div>
+                                <div class="foodText">
+                                    <div class="foodTitleText">#몬스터살롱</div>
+                                    <div class="foodSubText">
+                                        제주 애월에 위치한 수제버거 맛집 '몬스터살롱'
+                                        <br>
+                                        힙한 외관과 흑돼지 수제버거 한 입 가득!
+                                        <br>
+                                        피로가 사르르~
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foodImage">
+                                <div class="foodText">
+                                    <div class="foodTitleText">#월정리갈비밥</div>
+                                    <div class="foodSubText">
+                                        제주 월정리 해변 근처에 위치한 '월정리갈비밥'
+                                        <br>
+                                        미니냉면에 흑돼지 갈비를 싸서 먹어주고,
+                                        <br>
+                                        제주타워(한라봉주스) 한 입 꿀꺽!
+                                    </div>
+                                </div>
+                                <div class="food" style="background-image: url(image/jejuFoodImage_2.jpg);"></div>
+                            </div>
+                            <div class="foodImage">
+                                <div class="food" style="background-image: url(image/jejuFoodImage_3.jpg);"></div>
+                                <div class="foodText">
+                                    <div class="foodTitleText">#달콤아재</div>
+                                    <div class="foodSubText">
+                                        제주 우도에 위치한 '달콤아재'
+                                        <br>
+                                        우도 투어를 마치고,
+                                        <br>
+                                        우도땅콩 아이스크림 꼭 먹어주기!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <a name="yeosu"><hr></a>
+                <section class="yeosu">
+                    <div class="titleBox">
+                        <div id="titleBoxMain" name="yeosu">YeoSu</div>
+                        <div id="titleBoxSub">여수</div>
+                        <div id="titleBoxIntro">해양 도시 그 이상의 무한한 가능성의<br>아름다움을 간직한 여수</div>
+                    </div>
+                    <div class="content">
+                        <div class="third-slide slidebox">
+                            <ul class="third-slides slides">
+                                <li style="background-image: url(image/yeosuMain_2.jpg);"></li>
+                                <li style="background-image: url(image/yeosuMain.jpg);"></li>
+                                <li style="background-image: url(image/yeosuMain_3.jpg);"></li>
+                            </ul>
+                            <div class="controller">
+                                <div class="thirdPrev prev"></div>
+                                <div class="thirdNext next"></div>
+                            </div>
+                        </div>
+                        <div class="spotImage">
+                            <div id="spotImage_1">
+                                <div class="image yeosuSpotImage_1" onmouseenter="mouseEnterBackgroundImage('yeosuSpotImage_1', 'image/yeosuSub_1.jpg')" onmouseleave="mouseleaveBackgroundImageRestore('yeosuSpotImage_1', 'image/yeosuSub_2.jpg')"></div>
+                                <div id="spotText">#여수 해상케이블카</div>
+                                <div id="explainSpot">
+                                    여수 야경을 한 눈에 담을 수 있어 필수 코스!
+                                    <br>
+                                    동백꽃으로 유명한 오동도를 힐링하며 이동할 수 있음
+                                </div>
+                            </div>
+                            <div id="spotImage_2">
+                                <div class="image yeosuSpotImage_2" onmouseenter="mouseEnterBackgroundImage('yeosuSpotImage_2', 'image/yeosuSub_3.jpg')" onmouseleave="mouseleaveBackgroundImageRestore('yeosuSpotImage_2', 'image/yeosuSub_4.jpg')"></div>
+                                <div id="spotText">#돌산대교</div>
+                                <div id="explainSpot">
+                                    여수 야경의 끝판왕 등장!
+                                    <br>
+                                    유람선이 지나가는 풍경을 보며 취하는 밤
+                                </div>
+                            </div>
+                        </div>
+                        <div class="foodBox">
+                            <div id="foodBoxTitle">먹부림</div>
+                            <div class="foodImage">
+                                <div class="food" style="background-image: url(image/yeosuFoodImage_1.jpg);"></div>
+                                <div class="foodText">
+                                    <div class="foodTitleText">#바다식탁</div>
+                                    <div class="foodSubText">
+                                        여수 고소동에 위치한 맛집 '바다식탁'
+                                        <br>
+                                        고소동 벽화골목길을 따라올라오며 첫번째 힐링,
+                                        <br>
+                                        바다뷰를 바라보며 먹는 두번째 힐링,
+                                        <br>
+                                        푸짐한 양과 신선한 해산물로 세번째 힐링,
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="foodImage">
+                                <div class="foodText">
+                                    <div class="foodTitleText">#진미꽃게탕</div>
+                                    <div class="foodSubText">
+                                        여수 학동의 위치한 맛집 '진미꽃게탕'
+                                        <br>
+                                        꽃게 덕후라면 반드시 가봐야하는 여수의 맛집
+                                        <br>
+                                        통통한 꽃게살에 감동받을 수 있으니 주의!
+                                    </div>
+                                </div>
+                                <div class="food" style="background-image: url(image/yeosuFoodImage_2.jpg);"></div>
+                            </div>
+                            <div class="foodImage">
+                                <div class="food" style="background-image: url(image/yeosuFoodImage_3.jpg);"></div>
+                                <div class="foodText">
+                                    <div class="foodTitleText">#밤바다포차 회</div>
+                                    <div class="foodSubText">
+                                        여수 낭만포차거리의 횟집
+                                        <br>
+                                        여수밤바다~ 장범준이 생각나는 낭만포차거리
+                                        <br>
+                                        포차에서 포장해온 회 먹으면서 휴식타임 즐기기
+                                        <br>
+                                        (라면은 국룰!)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer-section">
+        <div class="footer-wrap">
+            <div class="footer-top">
+                <div class="footer-top-title">상호명 : 채니 ㈜</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-top-title">대표이사 : 박채은</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-top-title">사업자등록번호 : 123-45-67890</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-top-title">통신판매업 신고번호 : 서울 강남 제 2014-01호</div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-title">주소 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 5층 채니 ㈜</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-bottom-title">제휴문의 : 070-9876-5432</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-bottom-title">이메일 : chaeeun0119@chany.com</div>
+            </div>
+            <div class="footer-copyright">Copyright 2022 CHANY. All Rights Reserved.</div>
+        </div>
+    </footer>
+    <div class="scroll-top-btn">
+        <a href="#"><div id="scrollTopBtnImage"></div></a>
+    </div>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const btn = document.querySelector("#scrollTopBtnImage");
+        if(document.getElementsByTagName('html')[0].scrollTop < 200) {
+            btn.style.display = 'none';
+        } else btn.style.display = 'block';
+    });
+
+    const mouseEnterBackgroundImage = (className, source) => {
+        if(className === 'mainBookImage') {
+            document.querySelector(`.${className}`).style.animation = 'fadein 2s';
+        } else {
+            document.querySelector(`.${className}`).style.transition = '1s ease-out';
+        }
+        document.querySelector(`.${className}`).style.backgroundImage = `url(${source})`;
+    };
+
+    const mouseleaveBackgroundImageNone = () => {
+        document.querySelector(".mainBookImage").style.animation = 'fadeout 2s';
+        document.querySelector(".mainBookImage").style.backgroundImage = `url(image/mainBook_main.png`;
+    };
+
+    const mouseleaveBackgroundImageRestore = (className, source) => {
+        document.querySelector(`.${className}`).style.transition = '1s ease-out';
+        document.querySelector(`.${className}`).style.backgroundImage = `url(${source})`;
+    }
+
+    // 첫번째 무한 슬라이드 구현
+    const firstSlides = document.querySelector(".first-slides");
+    const firstSlideImg = document.querySelectorAll(".first-slides li");
+    let firstCurrentIndex = 0;
+    const firstSlideCount = firstSlideImg.length;
+    const slideWidth = 900;
+
+    makeCloneFirst(); // 처음이미지와 마지막 이미지 복사 함수
+    initfunctionFirst(); //슬라이드 넓이와 위치값 초기화 함수
+
+    function makeCloneFirst() {
+        let cloneSlide_first = firstSlideImg[0].cloneNode(true);
+        let cloneSlide_last = firstSlides.lastElementChild.cloneNode(true);
+        firstSlides.append(cloneSlide_first);
+        firstSlides.insertBefore(cloneSlide_last, firstSlides.firstElementChild);
+    }
+
+    function initfunctionFirst() {
+        firstSlides.style.width = (slideWidth) * (firstSlideCount + 2) + 'px';
+        firstSlides.style.left = -(slideWidth) + 'px';
+    }
+
+    document.querySelector(".firstNext").addEventListener('click', () => {
+        if(firstCurrentIndex <= firstSlideCount-1) {
+            firstSlides.style.left = -(firstCurrentIndex+2) * slideWidth + 'px';
+            firstSlides.style.transition = `${0.5}s ease-out`;
+        }
+        if(firstCurrentIndex == firstSlideCount-1) {
+            setTimeout(function () {
+                firstSlides.style.left = -(slideWidth) + 'px';
+                firstSlides.style.transition = `${0}s ease-out`;
+            }, 500);
+            firstCurrentIndex = -1;
+        }
+        firstCurrentIndex += 1;
+    });
+
+    document.querySelector(".firstPrev").addEventListener('click', () => {
+        if(firstCurrentIndex >= 0) {
+            firstSlides.style.left = -firstCurrentIndex * slideWidth+'px';
+            firstSlides.style.transition = `${0.5}s ease-out`;
+        }
+        if(firstCurrentIndex === 0) {
+            setTimeout(() => {
+                firstSlides.style.left = -firstSlideCount * (slideWidth)+'px';
+                firstSlides.style.transition = `${0}s ease-out`;
+            }, 500);
+            firstCurrentIndex = firstSlideCount;
+        }
+        firstCurrentIndex -= 1;
+    });
+
+    // 두번째 무한 슬라이드 구현
+    const secondSlides = document.querySelector(".second-slides");
+    const secondSlideImg = document.querySelectorAll(".second-slides li");
+    let secondCurrentIndex = 0;
+    const secondSlideCount = secondSlideImg.length;
+
+    makeCloneSecond(); // 처음이미지와 마지막 이미지 복사 함수
+    initfunctionSecond(); //슬라이드 넓이와 위치값 초기화 함수
+
+    function makeCloneSecond() {
+     let cloneSlide_first = secondSlideImg[0].cloneNode(true);
+     let cloneSlide_last = secondSlides.lastElementChild.cloneNode(true);
+     secondSlides.append(cloneSlide_first);
+     secondSlides.insertBefore(cloneSlide_last, secondSlides.firstElementChild);
+    }
+
+    function initfunctionSecond() {
+     secondSlides.style.width = (slideWidth) * (secondSlideCount + 2) + 'px';
+     secondSlides.style.left = -(slideWidth) + 'px';
+    }
+
+    document.querySelector(".secondNext").addEventListener('click', () => {
+        if(secondCurrentIndex <= secondSlideCount-1) {
+         secondSlides.style.left = -(secondCurrentIndex+2) * slideWidth + 'px';
+         secondSlides.style.transition = `${0.5}s ease-out`;
+        }
+        if(secondCurrentIndex == secondSlideCount-1) {
+            setTimeout(function () {
+             secondSlides.style.left = -(slideWidth) + 'px';
+             secondSlides.style.transition = `${0}s ease-out`;
+            }, 500);
+            secondCurrentIndex = -1;
+        }
+        secondCurrentIndex += 1;
+    });
+
+    document.querySelector(".secondPrev").addEventListener('click', () => {
+        if(secondCurrentIndex >= 0) {
+         secondSlides.style.left = -secondCurrentIndex * slideWidth+'px';
+         secondSlides.style.transition = `${0.5}s ease-out`;
+        }
+        if(secondCurrentIndex === 0) {
+            setTimeout(() => {
+             secondSlides.style.left = -secondSlideCount * (slideWidth)+'px';
+             secondSlides.style.transition = `${0}s ease-out`;
+            }, 500);
+            secondCurrentIndex = secondSlideCount;
+        }
+        secondCurrentIndex -= 1;
+    });
+
+    // 세번째 무한 슬라이드 구현
+    const thridSlides = document.querySelector(".third-slides");
+    const thirdSlideImg = document.querySelectorAll(".third-slides li");
+    let thirdCurrentIndex = 0;
+    const thirdSlideCount = thirdSlideImg.length;
+
+    makeCloneThird(); // 처음이미지와 마지막 이미지 복사 함수
+    initfunctionThird(); //슬라이드 넓이와 위치값 초기화 함수
+
+    function makeCloneThird() {
+     let cloneSlide_first = thirdSlideImg[0].cloneNode(true);
+     let cloneSlide_last = thridSlides.lastElementChild.cloneNode(true);
+     thridSlides.append(cloneSlide_first);
+     thridSlides.insertBefore(cloneSlide_last, thridSlides.firstElementChild);
+    }
+
+    function initfunctionThird() {
+     thridSlides.style.width = (slideWidth) * (thirdSlideCount + 2) + 'px';
+     thridSlides.style.left = -(slideWidth) + 'px';
+    }
+
+    document.querySelector(".thirdNext").addEventListener('click', () => {
+        if(thirdCurrentIndex <= thirdSlideCount-1) {
+         thridSlides.style.left = -(thirdCurrentIndex+2) * slideWidth + 'px';
+         thridSlides.style.transition = `${0.5}s ease-out`;
+        }
+        if(thirdCurrentIndex == thirdSlideCount-1) {
+            setTimeout(function () {
+             thridSlides.style.left = -(slideWidth) + 'px';
+             thridSlides.style.transition = `${0}s ease-out`;
+            }, 500);
+            thirdCurrentIndex = -1;
+        }
+        thirdCurrentIndex += 1;
+    });
+
+    document.querySelector(".thirdPrev").addEventListener('click', () => {
+        if(thirdCurrentIndex >= 0) {
+         thridSlides.style.left = -thirdCurrentIndex * slideWidth+'px';
+         thridSlides.style.transition = `${0.5}s ease-out`;
+        }
+        if(thirdCurrentIndex === 0) {
+            setTimeout(() => {
+             thridSlides.style.left = -thirdSlideCount * (slideWidth)+'px';
+             thridSlides.style.transition = `${0}s ease-out`;
+            }, 500);
+            thirdCurrentIndex = thirdSlideCount;
+        }
+        thirdCurrentIndex -= 1;
+    });
+
+    // 로그인 시 헤더에 표시
+    const loginInfo = () => {
+    const loginData = JSON.parse(localStorage.getItem("loginInfo"));
+    const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
+        
+        if(loginData) {
+            if(loginData.permission === 'normal') {
+                loginMemberInfoDiv.innerHTML = `<a href='myPage.html'>${loginData.userName}</a>님, 환영합니다!`;
+                loginText.innerHTML = `LOGOUT`;
+                joinText.innerHTML = '';
+            } else if(loginData.permission === 'admin') {
+                loginMemberInfoDiv.innerHTML = `<a href='managerPage.html'>매니저 ${loginData.managerId}</a> 계정으로 접속되었습니다.`;
+                loginText.innerHTML = `LOGOUT`;
+                joinText.innerHTML = '';
+            }
+        } else {
+            loginMemberInfoDiv.innerHTML = '';
+            loginText.innerHTML = 'LOGIN';
+            joinText.innerHTML = 'JOIN';
+        }
+    };
+    
+    loginInfo();
+
+    const loginBtn = (element) => {
+        const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
+        
+        if(element.innerHTML === 'LOGIN') {
+            window.location.href = "login.html";
+            return;
+        }
+
+        if(element.innerHTML === 'LOGOUT') {
+            const flag = confirm("로그아웃 하시겠습니까?");
+            if(flag) {
+                localStorage.removeItem('loginInfo');
+                loginMemberInfoDiv.innerHTML = '';
+                loginText.innerHTML = 'LOGIN';
+                joinText.innerHTML = 'JOIN';
+                window.location.href = 'index.html';
+            } else {
+                return;
+            }
+        }
+    };
+</script>
+</body>
+</html>

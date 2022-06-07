@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chany</title>
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=East+Sea+Dokdo&family=Hi+Melody&family=Jua&family=Lato:wght@700&family=Luckiest+Guy&family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Racing+Sans+One&family=Roboto+Mono:ital,wght@0,400;1,500&family=Shrikhand&family=Ultra&display=swap" rel="stylesheet"></head>
+<body>
+    <header>
+        <div class="header">
+            <h2 class="logo"><a href="index.html">CHANY</a></h2>
+            <nav>
+                <ul class="headerMenu">
+                    <li id="introduceBtn"><a onclick="menuScroll('INTRODUCE')">INTRODUCE</a></li>
+                    <li id="travelBtn"><a onclick="menuScroll('TRAVEL')">TRAVEL</a></li>
+                    <li id="roadMapBtn"><a onclick="menuScroll('ROAD-MAP')">ROAD-MAP</a></li>
+                </ul>
+                <div id="menuBorderLine"></div>
+            </nav>
+            <div class="loginMenu">
+                <div class="loginMemberInfo"></div>
+                <div id="loginText" onclick="loginBtn(this);">LOGIN</div>
+                <a href="join.html" id="joinText">JOIN</a>
+            </div>
+        </div>
+    </header>
+        
+    <main>
+        <div class="container">
+            <div id="mainImg"></div>
+            <div id="mainTitleArea">
+                <h1 class="mainTitle">WELCOME TO CHANY</h1>
+                <p class="subTitle">개발자를 꿈꾸는 코린이입니다. <br> 자기소개 여행 로드맵 서비스를 제공합니다.</p>
+            </div>
+            <section class="service">
+                <div id="line"></div>
+                <div class="mainIntroduce" id="mainIntroduce">
+                    <div class="textArea">
+                        <h2>INTRODUCE</h2>
+                        <p>'CHANY'<br>궁금하신가요?</p>
+                        <p>CHANY에 대한 궁금증을 풀어보세요.<br>프로필, 경력사항, 성격에 대해 알아가실 수 있습니다.<br>지금 바로 확인해보세요!</p>
+                        <a href="introduce.html"><span id="moreButton"><img src="../img/open_in_new.png" alt="">MORE</span></a>
+                    </div>
+                    <div class="imageArea">
+                        <div class="image introduceMainImage" style="background-image: url(image/introduceMainImage.jpg);"></div>
+                    </div>
+                </div>
+                <div class="mainTravel" id="mainTravel">
+                    <div class="imageArea">
+                        <div class="image travelMainImage" style="background-image: url(image/travelMainImage.jpg);"></div>
+                    </div>
+                    <div class="textArea">
+                        <h2>TRAVEL</h2>
+                        <p>여행은<br>언제나 즐거워</p>
+                        <p>여행을 떠나고 싶지만 어디로 떠나야할 지 모르시겠나요?
+                            <br>
+                            고민이라면, CHANY에서 해결하세요.
+                            <br>
+                            여행지 추천과 맛집 리스트에 대한 정보를 얻으실 수 있습니다.
+                        </p>
+                        <a href="travel.html"><span id="moreButton"><img src="../img/open_in_new.png" alt="">MORE</span></a>
+                    </div>
+                </div>
+                <div class="mainRoadmap" id="mainRoadmap">
+                    <div class="textArea">
+                        <h2>ROAD-MAP</h2>
+                        <p>계획 없는 목표는<br>한낱 꿈에 불과하다.</p>
+                        <p>꿈을 날짜와 함께 적어 놓으면 그것은 목표가 됩니다.
+                            <br>
+                            목표를 잘게 나누면 그것은 계획이 되고<br>
+                            실행에 옮기면 꿈이 실현됩니다.
+                        </p>
+                        <a href="roadmap.html"><span id="moreButton"><img src="../img/open_in_new.png" alt="">MORE</span></a>
+                    </div>
+                    <div class="imageArea">
+                        <div class="image roadmapMainImage" style="background-image: url(image/roadmapMainImage.jpg);"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <aside>
+        <div class="scroll-top-btn">
+            <a href="#"><div id="scrollTopBtnImage"></div></a>
+        </div>
+    </aside>
+    
+    <footer class="footer-section">
+        <div class="footer-wrap">
+            <div class="footer-top">
+                <div class="footer-top-title">상호명 : 채니 ㈜</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-top-title">대표이사 : 박채은</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-top-title">사업자등록번호 : 123-45-67890</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-top-title">통신판매업 신고번호 : 서울 강남 제 2014-01호</div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-title">주소 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 5층 채니 ㈜</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-bottom-title">제휴문의 : 070-9876-5432</div>
+                <div class="footer-right-border"></div>
+                <div class="footer-bottom-title">이메일 : chaeeun0119@chany.com</div>
+            </div>
+            <div class="footer-copyright">Copyright 2022 CHANY. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+    // 메뉴바 이동
+    window.addEventListener('scroll', () => {
+        const btn = document.querySelector("#scrollTopBtnImage");
+        const scrollTop = document.documentElement.scrollTop;
+
+        if(scrollTop < 200) {
+            btn.style.display = 'none';
+        } else {
+            btn.style.display = 'block';
+        }
+
+        const mainIntroduceOffsetTop = document.querySelector("#mainIntroduce").scrollTop; //1220
+        const mainTravelOffsetTop = document.querySelector("#mainTravel").offsetTop; // 1960
+        const mainRoadmapOffsetTop = document.querySelector("#mainRoadmap").offsetTop; //2620
+        const serviceOffsetTop = document.querySelector(".service").offsetTop;
+        const menuBorderLine = document.querySelector("#menuBorderLine");
+
+        const travelImage = document.querySelector(".mainTravelImage");
+        
+        const introduceBtn = document.querySelector("#introduceBtn");   
+        const travelBtn = document.querySelector("#travelBtn");
+        const roadMapBtn = document.querySelector("#roadMapBtn");
+
+        if(scrollTop >= (serviceOffsetTop + mainRoadmapOffsetTop-240)) {
+            menuBorderLine.style.width = `${roadMapBtn.offsetWidth}px`;
+            menuBorderLine.style.left = `${roadMapBtn.offsetLeft}px`;
+        } else if(scrollTop >= (serviceOffsetTop + mainTravelOffsetTop-240)) {
+            menuBorderLine.style.width = `${travelBtn.offsetWidth}px`;
+            menuBorderLine.style.left = `${travelBtn.offsetLeft}px`;
+        } else if(scrollTop >= (serviceOffsetTop + mainIntroduceOffsetTop-160)) {
+            menuBorderLine.style.width = `${introduceBtn.offsetWidth}px`;
+            menuBorderLine.style.left = `${introduceBtn.offsetLeft}px`;
+        } else {
+            menuBorderLine.style.width = '';
+            menuBorderLine.style.left = '';
+        }
+    });
+
+    // 메뉴 클릭 시 이동
+    const menuScroll = (element) => {
+        const serviceOffsetTop = document.querySelector(".service").offsetTop;
+        const mainIntroduceOffsetTop = document.querySelector("#mainIntroduce").offsetTop-80 + serviceOffsetTop;
+        const mainTravelOffsetTop = document.querySelector("#mainTravel").offsetTop-240 + serviceOffsetTop;
+        const mainRoadmapOffsetTop = document.querySelector("#mainRoadmap").offsetTop-240 + serviceOffsetTop;
+        
+        if(element == 'INTRODUCE') {
+            window.scroll({top:mainIntroduceOffsetTop});
+        } else if(element == 'TRAVEL') {
+            window.scroll({top:mainTravelOffsetTop});
+        } else if(element == 'ROAD-MAP') {
+            window.scroll({top:mainRoadmapOffsetTop});
+        }
+    };
+
+    // 로그인 시 헤더에 표시
+    const loginInfo = () => {
+        const loginData = JSON.parse(localStorage.getItem("loginInfo"));
+        const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
+        
+        if(loginData) {
+            if(loginData.permission === 'normal') {
+                loginMemberInfoDiv.innerHTML = `<a href='myPage.html'>${loginData.userName}</a>님, 환영합니다!`;
+                loginText.innerHTML = `LOGOUT`;
+                joinText.innerHTML = '';
+            } else if(loginData.permission === 'admin') {
+                loginMemberInfoDiv.innerHTML = `<a href='managerPage.html'>매니저 ${loginData.managerId}</a> 계정으로 접속되었습니다.`;
+                loginText.innerHTML = `LOGOUT`;
+                joinText.innerHTML = '';
+            }
+        } else {
+            loginMemberInfoDiv.innerHTML = '';
+            loginText.innerHTML = 'LOGIN';
+            joinText.innerHTML = 'JOIN';
+        }
+    };
+    
+    loginInfo();
+
+    const loginBtn = (element) => {
+        const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
+        
+        if(element.innerHTML === 'LOGIN') {
+            window.location.href = "login.html";
+            return;
+        }
+
+        if(element.innerHTML === 'LOGOUT') {
+            const flag = confirm("로그아웃 하시겠습니까?");
+            if(flag) {
+                localStorage.removeItem('loginInfo');
+                loginMemberInfoDiv.innerHTML = '';
+                loginText.innerHTML = 'LOGIN';
+                joinText.innerHTML = 'JOIN';
+                window.location.href = 'index.html';
+            } else {
+                return;
+            }
+        }
+    };
+    </script>
+</body>
+</html>
