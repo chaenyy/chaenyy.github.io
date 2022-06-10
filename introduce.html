@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=East+Sea+Dokdo&family=Hi+Melody&family=Jua&family=Lato:wght@700&family=Luckiest+Guy&family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Quicksand:wght@300&family=Racing+Sans+One&family=Roboto+Mono:ital,wght@0,400;1,500&family=Shrikhand&family=Ultra&display=swap" rel="stylesheet"></head>
 <body>
+    <script type="text/javascript" defer src="js/introduce.js"></script>
+
     <header>
         <div class="header">
             <h2 class="logo"><a href="index.html">CHANY</a></h2>
@@ -135,53 +137,5 @@
             <div class="footer-copyright">Copyright 2022 CHANY. All Rights Reserved.</div>
         </div>
     </footer>
-
-    <script>
-    // 로그인 시 헤더에 표시
-        const loginInfo = () => {
-        const loginData = JSON.parse(localStorage.getItem("loginInfo"));
-        const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
-        
-        if(loginData) {
-            if(loginData.permission === 'normal') {
-                loginMemberInfoDiv.innerHTML = `<a href='myPage.html'>${loginData.userName}</a>님, 환영합니다!`;
-                loginText.innerHTML = `LOGOUT`;
-                joinText.innerHTML = '';
-            } else if(loginData.permission === 'admin') {
-                loginMemberInfoDiv.innerHTML = `<a href='managerPage.html'>매니저 ${loginData.managerId}</a> 계정으로 접속되었습니다.`;
-                loginText.innerHTML = `LOGOUT`;
-                joinText.innerHTML = '';
-            }
-        } else {
-            loginMemberInfoDiv.innerHTML = '';
-            loginText.innerHTML = 'LOGIN';
-            joinText.innerHTML = 'JOIN';
-        }
-    };
-    
-    loginInfo();
-
-    const loginBtn = (element) => {
-        const loginMemberInfoDiv = document.querySelector(".loginMemberInfo");
-        
-        if(element.innerHTML === 'LOGIN') {
-            window.location.href = "login.html";
-            return;
-        }
-
-        if(element.innerHTML === 'LOGOUT') {
-            const flag = confirm("로그아웃 하시겠습니까?");
-            if(flag) {
-                localStorage.removeItem('loginInfo');
-                loginMemberInfoDiv.innerHTML = '';
-                loginText.innerHTML = 'LOGIN';
-                joinText.innerHTML = 'JOIN';
-                window.location.href = 'index.html';
-            } else {
-                return;
-            }
-        }
-    };
-    </script>
 </body>
 </html>
